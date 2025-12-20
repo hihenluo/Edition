@@ -1,27 +1,22 @@
 {
-  "name": "edition-staking-app",
-  "version": "0.1.0",
-  "private": true,
+  "name": "non-fungible-token",
+  "version": "1.0.0",
+  "description": "non fungible token smart contract example",
+  "type": "module",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "test": "vitest run -- --manifest-path ./Clarinet.toml",
+    "test:reports": "vitest run -- --coverage --costs",
+    "test:watch": "chokidar \"unit-tests/**/*.ts\" \"contracts/**/*.clar\" -c \"npm t\""
   },
+  "author": "",
+  "license": "ISC",
   "dependencies": {
-    "@thirdweb-dev/contracts": "^3",
-    "@thirdweb-dev/react": "^3",
-    "@thirdweb-dev/sdk": "^3",
-    "ethers": "^5.6.8",
-    "next": "^13",
-    "react": "^18.2",
-    "react-dom": "^18.2"
-  },
-  "devDependencies": {
-    "@types/node": "^17.0.21",
-    "@types/react": "^17.0.40",
-    "eslint": "^8.11.0",
-    "eslint-config-next": "^12.1.0",
-    "typescript": "^4.6.2"
+    "@stacks/clarinet-sdk": "^3.10.0",
+    "@stacks/transactions": "^7.0.6",
+    "@types/node": "^22.15.17",
+    "chokidar-cli": "^3.0.0",
+    "typescript": "^5.3.3",
+    "vitest": "^4.0.9",
+    "vitest-environment-clarinet": "^3.0.2"
   }
 }
